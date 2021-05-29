@@ -28,6 +28,9 @@ def create_buggy():
     elif request.method == 'POST':
         msg=""
         qty_wheels = request.form['qty_wheels']# Editing needs to be done here
+        if qty_wheels=request.form=="bananas"
+        msg=f"oh :( no that is not number:{qty_wheels}"
+        return render_template("updated.html", msg = msg)
         try:
             with sql.connect(DATABASE_FILE) as con:
                 cur = con.cursor()
@@ -42,7 +45,7 @@ def create_buggy():
             msg = "error in update operation"
         finally:
             con.close()
-        return render_template("updated.html", msg = msg)
+     return render_template("updated.html", msg = msg)
 
 #------------------------------------------------------------
 # a page for displaying the buggy

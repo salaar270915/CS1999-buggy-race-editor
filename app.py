@@ -27,7 +27,7 @@ def create_buggy():
         return render_template("buggy-form.html")
     elif request.method == 'POST':
         msg=""
-        qty_wheels = request.form['qty_wheels']
+        qty_wheels = request.form['qty_wheels']# Editing needs to be done here
         try:
             with sql.connect(DATABASE_FILE) as con:
                 cur = con.cursor()
